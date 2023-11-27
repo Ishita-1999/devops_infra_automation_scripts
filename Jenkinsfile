@@ -23,7 +23,7 @@ pipeline {
       }
     }
   }
-  steps(deploy) 
+      steps('deploy') 
   {
                 script {
                     // Pull the latest code
