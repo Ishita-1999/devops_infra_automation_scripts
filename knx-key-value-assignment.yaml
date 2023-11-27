@@ -19,3 +19,48 @@ spec:
         image: ishita1999/devops_knorex:flask
         ports:
         - containerPort: 5000
+
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: knorex-service
+spec:
+  selector:
+    app: knorex
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 5000
+  type: ClusterIP
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: knorex-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+    - host: localhost
+      http:
+        paths:
+          - path: /set
+            pathType: Prefix
+            backend:
+              service:
+                name: knorex-service
+                port:
+                  number: 5000
+      - host: localhost
+      http:
+        paths:
+          - path: /get
+            pathType: Prefix
+            backend:
+              service:
+                name: knorex-service
+                port:
+                  number: 5000
