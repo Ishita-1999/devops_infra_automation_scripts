@@ -28,5 +28,8 @@ Jenkins/CircleCI/TravisCI has Admin access to the K8s cluster, so running kubect
 - Created Jenkins CI/CD pipeline to build docker image and pushed the same to docker hub repository.
 - Deployed the knx-key-value deployment, service and ngress on ubuntu virtual machine where kubernetes is running.
 
+![image](https://github.com/Ishita-1999/devops_knorex/assets/61704617/3597e2f6-2220-4246-bff7-9c33316893fc)
+
+![image](https://github.com/Ishita-1999/devops_knorex/assets/61704617/310859a1-e891-4816-9d92-109f4482d066)
 
 <img width="1437" alt="image" src="https://github.com/Ishita-1999/devops_knorex/assets/61704617/c732dba1-0a85-4c6d-b739-14082dd86e93">
