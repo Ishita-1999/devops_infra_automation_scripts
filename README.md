@@ -25,5 +25,5 @@ Jenkins/CircleCI/TravisCI has Admin access to the K8s cluster, so running kubect
 - Write the Service, Ingress etc for the K8s resource.
 
 ## Solution 3:
-- Created Jenkins CI/CD pipeline to build docker iamge and push the same to docker hub repository.
+- Created Jenkins CI/CD pipeline to build docker image and pushed the same to docker hub repository.
 - Deployed the knx-key-value deployment, service and ngress on ubuntu virtual machine where kubernetes is running.
