@@ -20,7 +20,6 @@ spec:
         ports:
         - containerPort: 5000
 
-
 ---
 apiVersion: v1
 kind: Service
@@ -57,7 +56,7 @@ spec:
     - host: localhost
       http:
         paths:
-           - path: /get
+          - path: /get
             pathType: Prefix
             backend:
               service:
