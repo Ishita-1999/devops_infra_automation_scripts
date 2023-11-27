@@ -22,8 +22,7 @@ pipeline {
         sh 'docker push ishita1999/devops_knorex:flask'
       }
     }
-  }
-      steps('deploy') 
+    stage('deploy')
   {
                 script {
                     // Pull the latest code
@@ -32,6 +31,7 @@ pipeline {
                     sh 'ssh -o StrictHostKeyChecking=no ishi@3.93.201.0 "kubectl apply -f /home/ishi/devops_knorex/knx-key-value-assignment.yaml"'
  
                 }
-            }
+   }
+  }
         
 }
