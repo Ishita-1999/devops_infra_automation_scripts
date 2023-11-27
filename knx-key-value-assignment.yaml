@@ -54,10 +54,10 @@ spec:
                 name: knorex-service
                 port:
                   number: 5000
-      - host: localhost
+    - host: localhost
       http:
         paths:
-          - path: /get
+           - path: /get
             pathType: Prefix
             backend:
               service:
