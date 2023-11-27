@@ -24,7 +24,7 @@ pipeline {
     }
     stage('deploy')
   {
-                script {
+                steps {
                     // Pull the latest code
                     sh 'ssh -o StrictHostKeyChecking=no ishi@3.93.201.0 "rm -rf devops_knorex"'
                     sh 'ssh -o StrictHostKeyChecking=no ishi@3.93.201.0 "git clone https://github.com/Ishita-1999/devops_knorex.git"'
